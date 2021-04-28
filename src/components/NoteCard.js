@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import DeleteOutlined from '@material-ui/icons/DeleteOutlined';
 import {Avatar, makeStyles} from '@material-ui/core';
-import {blue, blueGrey, lightBlue, purple} from '@material-ui/core/colors';
+import {blue, lightBlue, purple} from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
 	avatar: {

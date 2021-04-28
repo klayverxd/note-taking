@@ -16,10 +16,6 @@ const theme = createMuiTheme({
 			main: '#8981D8',
 			dark: '#6A61C0',
 		},
-		text: {
-			// primary: '#fff',
-			// secondary: '#000',
-		},
 		typography: {
 			fontFamily: 'Quicksand',
 			fontWeightLight: 400,
