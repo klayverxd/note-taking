@@ -40,14 +40,11 @@ export default function Create() {
 			setDetailsError(true);
 		}
 		if (title && details) {
-			fetch(
-				'http://my-json-server.typicode.com/Klayverx/note-taking/notes',
-				{
-					method: 'POST',
-					headers: {'Content-Type': 'application/json'},
-					body: JSON.stringify({title, details, category}),
-				}
-			).then(() => history.push('/'));
+			fetch('http://localhost:3000/notes', {
+				method: 'POST',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({title, details, category}),
+			}).then(() => history.push('/'));
 		}
 	};
 

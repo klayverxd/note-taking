@@ -7,19 +7,15 @@ export default function Notes() {
 	const [notes, setNotes] = useState([]);
 
 	useEffect(() => {
-		fetch('http://my-json-server.typicode.com/Klayverx/note-taking/notes')
+		fetch('http://localhost:3000/notes')
 			.then(res => res.json())
 			.then(data => setNotes(data));
 	}, []);
 
 	const handleDelete = async id => {
-		await fetch(
-			'http://my-json-server.typicode.com/Klayverx/note-taking/notes/' +
-				id,
-			{
-				method: 'DELETE',
-			}
-		);
+		await fetch('http://localhost:3000/notes/' + id, {
+			method: 'DELETE',
+		});
 		const newNotes = notes.filter(note => note.id !== id);
 		setNotes(newNotes);
 	};
